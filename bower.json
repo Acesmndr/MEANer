@@ -1,0 +1,17 @@
+{
+  "name": "MEANer",
+  "version": "1.0.0",
+  "homepage": "https://github.com/Acesmndr/MEANer",
+  "authors": [
+    "Aashish Manandhar <acesmndr@gmail.com>"
+  ],
+  "description": "My first try at developing a MEAN stack application",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "toastr": "~2.1.2",
+    "angular": "~1.4.7",
+    "angular-resource": "~1.4.7",
+    "angular-route": "~1.4.7"
+  }
+}
