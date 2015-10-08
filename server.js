@@ -44,7 +44,7 @@ app.get('*',function(req,res){//any routes will be handled
 	});
 });
 
-var port=3030;
+var port=process.env.PORT||3030; //heroku runs on port 80 so configure it to run on the default environment port if it exists else set the port to 3030
 app.listen(port);
 console.log("Listening to port "+port+" ...");
 //node server.js/nodemon 
