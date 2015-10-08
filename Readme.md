@@ -20,4 +20,5 @@
 	*Create a Procfile
 	*Set up the port with the default environment port
 	*Login to the deployment toolbelt
+	*Create the cloud application
 
