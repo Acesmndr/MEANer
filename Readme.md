@@ -1,5 +1,6 @@
 #MEANer
 ##*My first try at building a MEAN stack application*
+*acesmndr2015*
 
 ###**Technologies Used**
 ####*Node modules
@@ -21,4 +22,8 @@
 	*Set up the port with the default environment port
 	*Login to the deployment toolbelt
 	*Create the cloud application
+	*setup the Mongo database of the server with user
+	*NODE_ENV=production nodemon server.js
+
+
 

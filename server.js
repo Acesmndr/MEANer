@@ -18,7 +18,11 @@ app.use(express.static(__dirname+'/public')); //by using the express's static fu
 //for stylus end
 
 //mongodb part
-mongoose.connect('mongodb://localhost/MEANer'); 
+if(env=="development"){
+	mongoose.connect('mongodb://localhost/MEANer');
+}else{
+	mongoose.connect('mongodb://acesmndr:meaner@ds047632.mongolab.com:47632/meaner'); //the username and password from the mongoLab was changed
+}
 var db=mongoose.connection;
 db.on('error',console.error.bind(console,"connection error ...")); 
 db.once('open',function callback(){ //execute once on every server start
