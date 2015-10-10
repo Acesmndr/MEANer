@@ -28,13 +28,13 @@ db.on('error',console.error.bind(console,"connection error ..."));
 db.once('open',function callback(){ //execute once on every server start
 	console.log("Database opened");
 });
-var messageSchema = mongoose.Schema({message:String}); //mongoose uses a schema so we create a schema for extracting text from the database
+/*var messageSchema = mongoose.Schema({message:String}); //mongoose uses a schema so we create a schema for extracting text from the database
 var Message=mongoose.model('Message',messageSchema);
 var mongoMessage;
 //to insert into mongodb database//mongo use MEANer db.messages.insert({message:'Hello from MongoDB'}) show collections
 Message.findOne().exec(function(err,messageDoc){ //find the first document from the database doesn't matter which one 
 	mongoMessage=messageDoc.message; //assign message to a variable and send it to index.jade as a parameter from res.render fn of routing
-});
+});*///this comment section was used to add mongo section to the page
 //mongodb partend
 
 app.get('/partials/:partialsPath',function(req,res){
@@ -43,9 +43,10 @@ app.get('/partials/:partialsPath',function(req,res){
 //app.use(express.logger('dev'));//turning on express's logging feature
 //app.use(express.bodyParser());//parse the body of any document sent back to the server and requirement of some other middlewares to be used
 app.get('*',function(req,res){//any routes will be handled
-	res.render('index',{
+	res.render('index');
+	/*res.render('index',{
 		mongoMessage:mongoMessage //send the value of the mongoMessage as a variable for the jade file
-	});
+	});*/
 });
 
 var port=process.env.PORT||3030; //heroku runs on port 80 so configure it to run on the default environment port if it exists else set the port to 3030

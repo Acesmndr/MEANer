@@ -1,0 +1,5 @@
+.panel.panel-primary
+	.panel-heading.text-center Awesome
+	.panel-body 
+		.row(ng-repeat="course in courses|orderBy:'name'")
+			.col-md-12 {{course.name}}

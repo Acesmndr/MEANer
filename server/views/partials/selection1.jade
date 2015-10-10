@@ -1,0 +1,5 @@
+.panel.panel-primary
+	.panel-heading.text-center AcesMndr
+	.panel-body
+		.row(ng-repeat="course in courses|filter:{backend:true}")
+			.col-md-12 {{course.name}}

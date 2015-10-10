@@ -1,2 +1,12 @@
-h1 This is a partial
-h2 {{ myVar }}
+//h1 This is a partial
+//h2 {{ myVar }}
+.container
+	.jumbotron
+		h1 MEANer
+		p This is the meanest page developed by Aashish Manandhar on 2015
+
+		.row
+			.col-md-6
+				div(ng-include="'/partials/selection1'")
+			.col-md-6
+				div(ng-include="'/partials/selection2'")

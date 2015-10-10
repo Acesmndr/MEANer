@@ -1,6 +1,19 @@
 extends ../includes/layout
 
 block main-content
+	.navbar.navbar-inverse.navbar-fixed-top
+		.container
+			.navbar-header
+				a.navbar-brand(href="*") MEANer
+					h6 -A meanstack Application
+			.navbar-collapse.collapse
+				.ul.nav.navbar-nav
+					li
+						a(href="*") Home
+
 	section.content
 		div(ng-view)
-	h2= mongoMessage
+	//h2= mongoMessage -to display the mongomessage
+
+	footer.container.text-center
+		p &copy; 2015 acesmndr creations
